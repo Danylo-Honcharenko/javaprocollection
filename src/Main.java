@@ -86,5 +86,19 @@ public class Main {
         } else {
             System.out.println("Номера для " + searchNumbers + " не найдены");
         }
+
+        System.out.println("\n===================");
+        System.out.println("Is a palindrome: ");
+        System.out.println(Algo.isPalindrome("race a car"));
+
+        System.out.println("\n===================");
+        System.out.println("Contains a duplicate: ");
+        int[] nums = new int[]{1,1,1,3,3,4,3,2,4,2};
+        System.out.println(Algo.containsDuplicate(nums));
+
+        System.out.println("\n===================");
+        System.out.println("Two Sum: ");
+        int[] numbersSum = new int[]{3,3};
+        System.out.println(Arrays.toString(Algo.twoSum(numbersSum, 6)));
     }
 }
