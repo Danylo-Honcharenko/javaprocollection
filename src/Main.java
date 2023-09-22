@@ -1,3 +1,4 @@
+import coffee.order.CoffeeOrderBoard;
 import phonebook.PhoneBook;
 import phonebook.Record;
 
@@ -100,5 +101,35 @@ public class Main {
         System.out.println("Two Sum: ");
         int[] numbersSum = new int[]{3,3};
         System.out.println(Arrays.toString(Algo.twoSum(numbersSum, 6)));
+
+        CoffeeOrderBoard orderBoard = new CoffeeOrderBoard();
+        orderBoard.add("Вася", "Суши");
+        orderBoard.add("Петя", "Мясо");
+        orderBoard.add("Мария", "Картошка");
+        orderBoard.add("Миша", "Салат");
+        orderBoard.add("Петя", "Картошка");
+        orderBoard.add("Саша", "Бургер");
+        orderBoard.add("Андрей", "Рыба");
+
+        System.out.println("Current orders");
+        System.out.println("================");
+        System.out.println("Num" + " | " + "Name" + " | " + "Wish");
+        orderBoard.draw();
+
+        System.out.println("\nNext order in line");
+        System.out.println("================");
+        System.out.println("Num" + " | " + "Name" + " | " + "Wish");
+        orderBoard.deliver();
+
+        System.out.println("\nReady order");
+        System.out.println("================");
+        System.out.println("Num" + " | " + "Name" + " | " + "Wish");
+        orderBoard.deliver(4);
+        orderBoard.deliver(2);
+
+        System.out.println("\nCurrent orders");
+        System.out.println("================");
+        System.out.println("Num" + " | " + "Name" + " | " + "Wish");
+        orderBoard.draw();
     }
 }
